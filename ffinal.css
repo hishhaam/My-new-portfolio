@@ -34,10 +34,6 @@
         display: block;
     }
 }
- /*Base styles for larger screens (desktops) */
-@media (min-width: 1200px) {
-    /* You can adjust layout here for larger screens if necessary */
-}
 
 /* Tablets and small laptops */
 @media (max-width: 1024px) {
@@ -48,8 +44,8 @@
         font-size: 28px;
     }
     .home-img {
-        width: 280px;
-        height: auto;
+        width: 100%; /* Make home image responsive */
+        height: auto; /* Maintain aspect ratio */
     }
 }
 
@@ -58,10 +54,14 @@
     .header {
         padding: 15px 5%;
     }
+     
     .home-content {
         align-items: center;
         text-align: center;
         padding: 0;
+    }
+    .home-content p {
+        font-size: medium;
     }
     .home-content h1 {
         font-size: 36px;
@@ -70,7 +70,8 @@
         font-size: 24px;
     }
     .home-img {
-        width: 200px;
+        width: 100%; /* Ensure the image spans full width */
+        height: auto; /* Maintain aspect ratio */
     }
     .pro-cont {
         flex-direction: column;
@@ -78,6 +79,9 @@
     }
     .skill-cont {
         flex-direction: column;
+    }
+    .menu-icon {
+        display: block; /* Make menu icon visible */
     }
 }
 
@@ -90,7 +94,7 @@
         font-size: 20px;
     }
     .home-img {
-        width: 150px;
+        width: 100%; /* Keep it responsive */
     }
     .pro-cont div img {
         width: 100%;
@@ -99,16 +103,12 @@
         width: 100px;
         height: auto;
     }
-} 
 
-
-/* Small mobile devices (portrait mode) */
-@media (max-width: 480px) {
     .pro-cont {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%; /* Ensure it spans the full width of the mobile screen */
+        width: 100%; /* Ensure it spans the full width */
     }
     
     .pro-cont div {
